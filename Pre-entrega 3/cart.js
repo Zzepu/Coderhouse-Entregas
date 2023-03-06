@@ -6,13 +6,13 @@ vehiclesInCart = JSON.parse(vehiclesInCart);
 
 // Traemos al archivo JS todo sobre el DOM
 const emptyCartContainer = document.querySelector("#empty-cart");
-const productsCartContainer = document.querySelector("products-cart");
-const actionsCartContainer = document.querySelector("actions-cart");
-const boughtCartContainer = document.querySelector("bought-cart");
+const productsCartContainer = document.querySelector("#products-cart");
+const actionsCartContainer = document.querySelector("#actions-cart");
+const boughtCartContainer = document.querySelector("#bought-cart");
 let deleteButtons = document.querySelectorAll(".delete-product-cart");
-const emptyButton = document.querySelector("empty-actions-cart");
+const emptyButtonFix = document.querySelector("#empty-actions-cart");
 const totalContainer = document.querySelector("#total");
-const buyButton = document.querySelector("buy-actions-cart")
+const buyButton = document.querySelector("#buy-actions-cart");
 
 
 //Cargar productos al carrito
@@ -22,7 +22,7 @@ function cartProductsUpload() {
         emptyCartContainer.classList.add("disabled");
         productsCartContainer.classList.remove("disabled");
         actionsCartContainer.classList.remove("disabled");
-        boughtCartContainer.classList.remove("disabled");
+        boughtCartContainer.classList.add("disabled");
     
         productsCartContainer.innerHTML = "";
     
@@ -55,6 +55,8 @@ function cartProductsUpload() {
     
         })
     
+    deleteButtonsUpdate();
+    totalUpdate();    
     
     } else {       
         emptyCartContainer.classList.remove("disabled");
@@ -62,9 +64,6 @@ function cartProductsUpload() {
         actionsCartContainer.classList.add("disabled");
         boughtCartContainer.classList.add("disabled");   
     }
-
-    deleteButtonsUpdate();
-    totalUpdate();
 
 }
 
@@ -84,14 +83,14 @@ function deleteFromCart(e) {
     const idButton = e.currentTarget.id;
     const index = vehiclesInCart.findIndex(vehicle => vehicle.id === idButton);
 
-    vehiclesInCart.splice(index,1);
+    vehiclesInCart.splice(index, 1);
     cartProductsUpload();
 
     localStorage.setItem("vehicles-in-cart", JSON.stringify(vehiclesInCart));
 
 }
 
-emptyButton.addEventListener("click", emptyButton)
+emptyButtonFix.addEventListener("click", emptyButton);
 
 //Vaciamos todo el carrito
 function emptyButton() {
@@ -107,7 +106,7 @@ function totalUpdate() {
     total.innerText = `${calculatedTotal}`;
 }
 
-buyButton.addEventListener("click", buyCart)
+buyButton.addEventListener("click", buyCart);
 
 //Comprar finalmente el carrito
 function buyCart() {
