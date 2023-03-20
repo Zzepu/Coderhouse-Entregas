@@ -80,6 +80,27 @@ function deleteButtonsUpdate() {
 
 //Eliminamos individualmente del carrito
 function deleteFromCart(e) {
+
+    Toastify({
+        text: "Vehiculo eliminado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #5c5770, #1e1b2b)",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".75rem"
+        },
+        offset: {
+            x: "1.5rem", // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: "1.5rem" // vertical axis - can be a number or a string indicating unity. eg: '2em'
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     const idButton = e.currentTarget.id;
     const index = vehiclesInCart.findIndex(vehicle => vehicle.id === idButton);
 
@@ -94,9 +115,23 @@ emptyButtonFix.addEventListener("click", emptyButton);
 
 //Vaciamos todo el carrito
 function emptyButton() {
-    vehiclesInCart.length = 0;
-    localStorage.setItem("vehicles-in-cart", JSON.stringify(vehiclesInCart));
-    cartProductsUpload();
+
+    Swal.fire({
+        title: '¿Estas seguro?',
+        icon: 'info',
+        html: `Se van a borrar ${vehiclesInCart.reduce((acc, vehicle) => acc + vehicle.cantidad, 0)} vehiculos`,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            vehiclesInCart.length = 0;
+            localStorage.setItem("vehicles-in-cart", JSON.stringify(vehiclesInCart));
+            cartProductsUpload();
+        }
+    })
+
 }
 
 

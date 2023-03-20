@@ -1,0 +1,142 @@
+[
+    {
+        "id": "audi-rs7",
+        "titulo": "Audi RS7",
+        "imagen": "./cars/audi-rs7.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 75000
+    },
+    {
+        "id": "ferrari-458",
+        "titulo": "Ferrari 458 Italia",
+        "imagen": "./cars/ferrari-458.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 80000
+    },
+    {
+        "id": "lamborghini",
+        "titulo": "Lamborghini Aventador",
+        "imagen": "./cars/lamborghini-aventador.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 120000
+    },
+    {
+        "id": "mclaren",
+        "titulo": "Mclaren",
+        "imagen": "./cars/mclaren.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 55000
+    },
+    {
+        "id": "mustang-shelby",
+        "titulo": "Mustang Shelby",
+        "imagen": "./cars/mustang-shelby.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 45000
+    },
+    {
+        "id": "panamera",
+        "titulo": "Porsche Panamera",
+        "imagen": "./cars/panamera.avif",
+        "categoria": {
+            "nombre": "Autos",
+            "id": "autos"
+        },
+        "precio": 145000
+    },
+    {
+        "id": "silverado",
+        "titulo": "Chevrolet Silverado",
+        "imagen": "./pickup/chevrolet-silverado.avif",
+        "categoria": {
+            "nombre": "Camionetas",
+            "id": "camionetas"
+        },
+        "precio": 37000
+    },
+    {
+        "id": "f150",
+        "titulo": "Ford F-150",
+        "imagen": "./pickup/f-150.avif",
+        "categoria": {
+            "nombre": "Camionetas",
+            "id": "camionetas"
+        },
+        "precio": 66000
+    },
+    {
+        "id": "gmc",
+        "titulo": "GMC Sierra",
+        "imagen": "./pickup/gmc-sierra.avif",
+        "categoria": {
+            "nombre": "Camionetas",
+            "id": "camionetas"
+        },
+        "precio": 87000
+    },
+    {
+        "id": "tacoma",
+        "titulo": "Toyora Tacoma",
+        "imagen": "./pickup/toyota-tacoma.avif",
+        "categoria": {
+            "nombre": "Camionetas",
+            "id": "camionetas"
+        },
+        "precio": 52000
+    },
+    {
+        "id": "harley-gris",
+        "titulo": "Harley Davidson Gris",
+        "imagen": "./motorcycle/harley-davidson-gris.avif",
+        "categoria": {
+            "nombre": "Motos",
+            "id": "motos"
+        },
+        "precio": 13000
+    },
+    {
+        "id": "duke",
+        "titulo": "KTM Duke",
+        "imagen": "./motorcycle/ktm-duke.avif",
+        "categoria": {
+            "nombre": "Motos",
+            "id": "motos"
+        },
+        "precio": 5500
+    },
+    {
+        "id": "spibo",
+        "titulo": "Spibo RT5",
+        "imagen": "./motorcycle/spibo-rt5.avif",
+        "categoria": {
+            "nombre": "Motos",
+            "id": "motos"
+        },
+        "precio": 8500
+    },
+    {
+        "id": "harley-negro",
+        "titulo": "Harley-Davidson Negra",
+        "imagen": "./motorcycle/harley-davidson-negro.avif",
+        "categoria": {
+            "nombre": "Motos",
+            "id": "motos"
+        },
+        "precio": 16000
+    }
+]
